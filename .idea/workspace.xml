@@ -15,14 +15,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99245d2e-c4c8-4541-8a6b-17e030bfe1a3" name="Default Changelist" comment="푸시">
-      <change afterPath="$PROJECT_DIR$/test2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="99245d2e-c4c8-4541-8a6b-17e030bfe1a3" name="Default Changelist" comment="푸시" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
