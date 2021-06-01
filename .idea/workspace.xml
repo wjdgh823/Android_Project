@@ -11,25 +11,11 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99245d2e-c4c8-4541-8a6b-17e030bfe1a3" name="Default Changelist" comment="푸시">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AndroidStudioProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AndroidStudioProjects.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="99245d2e-c4c8-4541-8a6b-17e030bfe1a3" name="Default Changelist" comment="푸시" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AndroidProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -87,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622468410069</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="푸시">
+      <created>1622556951967</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622556951967</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,14 +120,14 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="427" y="269" key="AndroidCreateResourceDirectoryDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622553643735" />
-    <state x="263" y="255" key="FileChooserDialogImpl" timestamp="1622554945645">
+    <state x="263" y="255" key="FileChooserDialogImpl" timestamp="1622556892099">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="263" y="255" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1622554945645" />
-    <state x="327" y="411" key="Github.ShareDialog" timestamp="1622468035376">
+    <state x="263" y="255" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1622556892099" />
+    <state x="327" y="411" width="444" height="204" key="Github.ShareDialog" timestamp="1622557199001">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="327" y="411" key="Github.ShareDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622468035376" />
+    <state x="327" y="411" width="444" height="204" key="Github.ShareDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622557199001" />
     <state x="425" y="514" key="IDE.errors.dialog" timestamp="1622554414495">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -151,6 +144,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="75" y="247" key="Vcs.Push.Dialog.v2/0.0.1707.1027@0.0.1707.1027" timestamp="1622468118689" />
+    <state x="328" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622556956793">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="328" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.1027@0.0.1707.1027" timestamp="1622556956793" />
     <state x="313" y="305" key="svn.repositoryBrowser" timestamp="1622467285735">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
