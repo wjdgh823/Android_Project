@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,7 +24,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99245d2e-c4c8-4541-8a6b-17e030bfe1a3" name="Default Changelist" comment="푸시" />
+    <list default="true" id="99245d2e-c4c8-4541-8a6b-17e030bfe1a3" name="Default Changelist" comment="푸시">
+      <change beforePath="$PROJECT_DIR$/.idea/AndroidStudioProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AndroidStudioProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aoppart2chapter01/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aoppart2chapter01/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/aoppart2chapter01" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -66,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622468078435</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="푸시">
+      <created>1622468410069</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622468410069</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -79,20 +95,37 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="푸시" />
     <option name="LAST_COMMIT_MESSAGE" value="푸시" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="263" y="255" key="FileChooserDialogImpl" timestamp="1622467959708">
+    <state x="309" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622468449794">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="263" y="255" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1622467959708" />
+    <state x="309" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622468449794" />
+    <state x="93" y="93" width="1521" height="841" key="AVDManager" timestamp="1622468679651">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="93" y="93" width="1521" height="841" key="AVDManager/0.0.1707.1027@0.0.1707.1027" timestamp="1622468679651" />
+    <state x="427" y="269" key="AndroidCreateResourceDirectoryDialog" timestamp="1622553643735">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="427" y="269" key="AndroidCreateResourceDirectoryDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622553643735" />
+    <state x="263" y="255" key="FileChooserDialogImpl" timestamp="1622553738667">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="263" y="255" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1622553738667" />
     <state x="327" y="411" key="Github.ShareDialog" timestamp="1622468035376">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="327" y="411" key="Github.ShareDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622468035376" />
+    <state x="595" y="215" key="RollbackChangesDialog" timestamp="1622468678057">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="595" y="215" key="RollbackChangesDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622468678057" />
     <state x="0" y="158" width="914" height="710" key="SettingsEditor" timestamp="1622467636328">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>

@@ -8,9 +8,9 @@
     tools:context=".MainActivity">
 
    <TextView
-       android:text="신장"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"/>
+       android:layout_height="wrap_content"
+       android:text="신장" />
 
    <EditText
        android:layout_width="match_parent"
