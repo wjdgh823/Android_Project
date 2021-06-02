@@ -22,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/androidProject" />
   </component>
   <component name="ProjectId" id="1tIqy1Q172f5aHpvYd3t4NMrHxJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -34,12 +34,13 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\wjdgh\AppData\Roaming\Subversion</configuration>
@@ -96,6 +97,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/AndroidProject" />
+      <path value="$PROJECT_DIR$/aoppart2chapter01" />
+    </ignored-roots>
     <MESSAGE value="푸시" />
     <option name="LAST_COMMIT_MESSAGE" value="푸시" />
   </component>
@@ -136,10 +142,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="595" y="215" key="RollbackChangesDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622468678057" />
-    <state x="0" y="158" width="914" height="710" key="SettingsEditor" timestamp="1622467636328">
+    <state x="0" y="158" width="914" height="710" key="SettingsEditor" timestamp="1622558872464">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="0" y="158" width="914" height="710" key="SettingsEditor/0.0.1707.1027@0.0.1707.1027" timestamp="1622467636328" />
+    <state x="0" y="158" width="914" height="710" key="SettingsEditor/0.0.1707.1027@0.0.1707.1027" timestamp="1622558872464" />
     <state x="75" y="247" key="Vcs.Push.Dialog.v2" timestamp="1622468118689">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
