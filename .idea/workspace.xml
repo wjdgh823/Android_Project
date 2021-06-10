@@ -15,14 +15,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99245d2e-c4c8-4541-8a6b-17e030bfe1a3" name="Default Changelist" comment="푸시" />
+    <list default="true" id="99245d2e-c4c8-4541-8a6b-17e030bfe1a3" name="Default Changelist" comment="푸시">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/androidProject" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1tIqy1Q172f5aHpvYd3t4NMrHxJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -35,8 +37,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/aoppart2chapter01" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622556951967</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="푸시">
+      <created>1622644715385</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622644715385</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,10 +135,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="427" y="269" key="AndroidCreateResourceDirectoryDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622553643735" />
-    <state x="263" y="255" key="FileChooserDialogImpl" timestamp="1622556892099">
+    <state x="263" y="255" key="FileChooserDialogImpl" timestamp="1622724453783">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
-    <state x="263" y="255" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1622556892099" />
+    <state x="263" y="255" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1622724453783" />
     <state x="327" y="411" width="444" height="204" key="Github.ShareDialog" timestamp="1622557199001">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
@@ -154,6 +163,10 @@
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
     <state x="328" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.1027@0.0.1707.1027" timestamp="1622556956793" />
+    <state x="640" y="413" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1622644693749">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="640" y="413" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1622644693749" />
     <state x="313" y="305" key="svn.repositoryBrowser" timestamp="1622467285735">
       <screen x="0" y="0" width="1707" height="1027" />
     </state>
