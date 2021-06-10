@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ResultActivity"/> <!-- ResultActivity를 추가해야 다음으로 넘어가서 작동한다. *필수 -->
     </application>
 
 </manifest>
