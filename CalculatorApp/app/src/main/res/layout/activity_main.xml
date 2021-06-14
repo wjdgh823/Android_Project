@@ -68,7 +68,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="7dp"
                 android:background="@drawable/button_background"
-                android:onClick="clearbuttonClicked"
+                android:onClick="clearButtonClicked"
                 android:stateListAnimator="@null"
                 android:text="C"
                 android:textSize="24dp" />
