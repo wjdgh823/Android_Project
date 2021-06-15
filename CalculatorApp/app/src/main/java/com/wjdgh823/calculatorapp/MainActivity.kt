@@ -8,6 +8,7 @@ import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,14 +58,15 @@ class MainActivity : AppCompatActivity() {
 
         val expressionText = expressionTextView.text.split(" ")
         if (expressionText.isNotEmpty() && expressionText.last().length >= 15) {
-           Toast.makeText(this, "15자리 까지만 사용할 수 있습니다.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "15자리 까지만 사용할 수 있습니다.", Toast.LENGTH_LONG).show()
             return
-        }  else if (expressionText.last().isEmpty() && number == "0") {
+        } else if (expressionText.last().isEmpty() && number == "0") {
             Toast.makeText(this, "0은 제일 앞에 올 수 없습니다.", Toast.LENGTH_LONG).show()
             return
         }
 
         expressionTextView.append(number) // 입력된 숫자를 더해서 넣어준다.
+        resultTextView.text = calculateExpression()
         // TODO resultTextView 실시간으로 계산결과를 넣어야하는 기능
 
     }
@@ -94,7 +96,8 @@ class MainActivity : AppCompatActivity() {
             ForegroundColorSpan(getColor(R.color.green)),
             expressionTextView.text.length - 1,
             expressionTextView.text.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE) // 연산자를 색깔을 칠해주는 것
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        ) // 연산자를 색깔을 칠해주는 것
 
         expressionTextView.text = ssb
 
@@ -106,12 +109,43 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun calculateExpression(): String {
+        val expressionTexts = expressionTextView.text.split(" ")
+
+        if (hasOperator.not() || expressionTexts.size != 3) {
+            return ""
+        } else if (expressionTexts[0].isNumber().not() || expressionTexts[2].isNumber().not()) {
+            return ""
+        }
+        val exp1 = expressionTexts[0].toBigInteger()
+        val exp2 = expressionTexts[2].toBigInteger()
+        val op = expressionTexts[1]
+
+        return when (op) {
+            "+" -> (exp1 + exp2).toString()
+            "-" -> (exp1 - exp2).toString()
+            "x" -> (exp1 * exp2).toString()
+            "/" -> (exp1 / exp2).toString()
+            "%" -> (exp1 % exp2).toString()
+            else -> ""
+        }
+    }
+
     fun historyButtonClicked(v: View) {
 
     }
 
     fun clearButtonClicked(v: View) {
 
+    }
+
+    fun String.isNumber(): Boolean {
+        return try {
+            this.toBigInteger()
+            true
+        } catch (e: NumberFormatException) {
+            false
+        }
     }
 
 }
