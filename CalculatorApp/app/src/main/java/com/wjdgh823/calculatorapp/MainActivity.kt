@@ -190,10 +190,12 @@ class MainActivity : AppCompatActivity() {
         historyLayout.isVisible = true
         historyLinearLayout.removeAllViews() // 삭제
 
+        /** 중요 **/
+
+        /* Thread(Runnable) : 네트워크 작업, DB작업 -> 무거운 작업들을 할 때 사용한다. */
         Thread(Runnable {
-
             db.historyDao().getAll().reversed().forEach {
-
+                /* ui에 뭔가 그려야할 때 ui에서 view 작업이 가능하다 -> runOnUiThread */
                 runOnUiThread {
                     val historyView = LayoutInflater.from(this).inflate(R.layout.history_row, null, false)
                     historyView.findViewById<TextView>(R.id.expressionTextView).text =  it.expression
@@ -203,6 +205,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }).start()
+
+        /** /중요 **/
         // TODO 디비에서 모든 기록 가져오기
         // TODO 뷰에서 모든 기록 할당
     }
@@ -229,6 +233,8 @@ class MainActivity : AppCompatActivity() {
         hasOperator = false
     }
 
+
+    // 확장함수 : 클래스이름.함수이름 -> 함수를 추가로 만드는 방법이다.
     fun String.isNumber(): Boolean {
         return try {
             this.toBigInteger()

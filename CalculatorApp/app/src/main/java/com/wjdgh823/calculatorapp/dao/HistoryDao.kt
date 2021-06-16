@@ -6,9 +6,11 @@ import androidx.room.Insert
 import androidx.room.Query
 import com.wjdgh823.calculatorapp.model.History
 
-@Dao  // lom에 연결된 것을 가져온것이다.
+@Dao  // room에 연결된 것을 가져온것이다.
 interface HistoryDao {
 
+
+    // Dao에서 쿼리를 실행할 수 있다.
     @Query("SELECT * FROM history")
     fun getAll(): List<History>
 
