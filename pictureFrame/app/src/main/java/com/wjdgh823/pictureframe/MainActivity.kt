@@ -64,6 +64,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun initStartPhotoFrameModeButton() {
+        startPhotoFrameModeButton.setOnClickListener {
+            val intent = Intent(this, PhotoFrameActivity::class.java)
+            imageUriList.forEachIndexed { index, uri ->
+                intent.putExtra("photo$index", uri.toString())
+            }
+            intent.putExtra("photoListSize", imageUriList.size)
+            startActivity(intent)
+        }
+    }
+
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -87,7 +98,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigatePhotos() {
-        val intent = Intent(Intent.ACTION_GET_CONTENT) // saf기능으로 ,, content를 가져오는 역할을 한다. : ACTION_GET_CONTENT
+        val intent = Intent(Intent.ACTION_GET_CONTENT) // saf기능으로 content를 가져오는 역할을 한다. : ACTION_GET_CONTENT
         intent.type = "image/*" // type중 이미지만 가져올 수 있도록 필터링한것이다.
         startActivityForResult(intent, 2000)
     }
@@ -103,7 +114,7 @@ class MainActivity : AppCompatActivity() {
             2000-> {
                 val selectedImageUri: Uri? = data?.data
                 if (selectedImageUri != null){
-                    if (imageUriList.size > 6) {
+                    if (imageUriList.size == 6) {
                         Toast.makeText(this, "이미 사진이 꽉 찼습니다.", Toast.LENGTH_SHORT).show()
                         return
                     }
@@ -131,8 +142,6 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun initStartPhotoFrameModeButton() {
 
-    }
 
 }
