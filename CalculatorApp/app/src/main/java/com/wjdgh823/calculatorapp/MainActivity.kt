@@ -149,7 +149,7 @@ class MainActivity : AppCompatActivity() {
         val expressionText = expressionTextView.text.toString()
         val resultText = calculateExpression()
 
-        // todo 디비에 넣어주는 부분
+        // todo 디비에 넣어주는 부분 -> 모든 디비에 관련한 작업은 새로운 thread를 사용해야한다.
         Thread(Runnable {
             db.historyDao().insertHistory(History(null, expressionText, resultText))
             // 값을 넣어주면 db에 하나씩 insert처리된다.
@@ -188,7 +188,7 @@ class MainActivity : AppCompatActivity() {
 
     fun historyButtonClicked(v: View) {
         historyLayout.isVisible = true
-        historyLinearLayout.removeAllViews() // 삭제
+        historyLinearLayout.removeAllViews() // 새롭게 가져오는 데이터를 넣어주기 위해 기존의 것을 삭제한다.
 
         /** 중요 **/
 
@@ -212,7 +212,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun closeHistoryButtonClicked(v: View) {
-        historyLayout.isVisible = false
+        historyLayout.isVisible = false // 보여주기 창을 false처리해서 창을 끈다
     }
 
     fun historyClearButtonClicked(v: View) {

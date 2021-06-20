@@ -6,6 +6,8 @@ import androidx.room.Insert
 import androidx.room.Query
 import com.wjdgh823.calculatorapp.model.History
 
+
+// room에 연결된 dao가 된것이다.
 @Dao  // room에 연결된 것을 가져온것이다.
 interface HistoryDao {
 
