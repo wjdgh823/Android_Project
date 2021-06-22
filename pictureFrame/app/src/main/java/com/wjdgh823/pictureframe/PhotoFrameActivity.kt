@@ -71,7 +71,7 @@ class PhotoFrameActivity: AppCompatActivity() {
         timer?.cancel()
     }
 
-    override fun onStart() {
+    override fun onStart() { // 전자액자에 들어왔을 때
         super.onStart()
 
         Log.d("PhotoFrame", "onStart!!! timer start")
@@ -79,7 +79,7 @@ class PhotoFrameActivity: AppCompatActivity() {
         startTimer()
     }
 
-    override fun onDestroy() {
+    override fun onDestroy() { // 아예 나가버렸을때
         super.onDestroy()
 
         Log.d("PhotoFrame", "onDestroy!!! timer cancel")

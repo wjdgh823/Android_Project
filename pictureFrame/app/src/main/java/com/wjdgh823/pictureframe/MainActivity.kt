@@ -46,9 +46,9 @@ class MainActivity : AppCompatActivity() {
     private fun initAddPhotoButton() { //사진을 추가하는 버튼 이벤트
         addPhotoButton.setOnClickListener {
             when {
-                ContextCompat.checkSelfPermission(
+                ContextCompat.checkSelfPermission( // 권한을 물어보기 위한 함수
                     this,
-                    android.Manifest.permission.READ_EXTERNAL_STORAGE
+                    android.Manifest.permission.READ_EXTERNAL_STORAGE  // 저장소에대한 권한이 필요하기에
                 ) == PackageManager.PERMISSION_GRANTED -> {
                     // TODO 권한이 잘 부여되었을 때 갤러리에서 사진을 선택하는 기능
                     navigatePhotos()
@@ -100,13 +100,13 @@ class MainActivity : AppCompatActivity() {
     private fun navigatePhotos() {
         val intent = Intent(Intent.ACTION_GET_CONTENT) // saf기능으로 content를 가져오는 역할을 한다. : ACTION_GET_CONTENT
         intent.type = "image/*" // type중 이미지만 가져올 수 있도록 필터링한것이다.
-        startActivityForResult(intent, 2000)
+        startActivityForResult(intent, 2000) // 보내기위해서 실행하는 함수
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {  // 데이터를 받아온다.
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (resultCode != Activity.RESULT_OK) {
+        if (resultCode != Activity.RESULT_OK) { // RESULT_OK / RESULT_CANCEL을 통해 값을 받아왔는지 안받았는지 확인 가능
             return
         }
 
