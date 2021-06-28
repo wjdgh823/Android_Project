@@ -1,7 +1,9 @@
 package com.wjdgh823.audiorecorder
 
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity() {
 
@@ -9,18 +11,43 @@ class MainActivity : AppCompatActivity() {
         findViewById(R.id.recordButton)
     }
 
+    private val requiredPermissions = arrayOf(android.Manifest.permission.RECORD_AUDIO)
+
     private var state = State.BEFORE_RECORDING
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        requestAudioPermission()  // 권한을 요청하는 함수이다.
         initViews()
 
     }
 
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        val audioRecordPermissionGranted =
+            requestCode == REQUEST_RECORD_AUDIO_PERMISSION &&
+                grantResults.firstOrNull() == PackageManager.PERMISSION_GRANTED
+
+    }
+
+
+    private fun requestAudioPermission() {
+        requestPermissions(requiredPermissions, REQUEST_RECORD_AUDIO_PERMISSION)
+    }
+
     private fun initViews() {
         recordButton.updateIconWithState(state)
+    }
+
+    companion object {
+        private const val REQUEST_RECORD_AUDIO_PERMISSION = 201
     }
 
 }
