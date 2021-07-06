@@ -1,6 +1,8 @@
 package com.wjdgh823.audiorecorder
 
 import android.content.pm.PackageManager
+import android.media.MediaPlayer
+import android.media.MediaRecorder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import java.util.jar.Manifest
@@ -11,9 +13,22 @@ class MainActivity : AppCompatActivity() {
         findViewById(R.id.recordButton)
     }
 
-    private val requiredPermissions = arrayOf(android.Manifest.permission.RECORD_AUDIO)
+    private val requiredPermissions = arrayOf(
+        android.Manifest.permission.RECORD_AUDIO,
+        android.Manifest.permission.READ_EXTERNAL_STORAGE
+    )
+
+    private val recordingFilePath: String by lazy {
+        "${externalCacheDir?.absolutePath}/recording.3gp"
+    }
+    private var recorder: MediaRecorder? =null
+    private var player: MediaPlayer?= null
 
     private var state = State.BEFORE_RECORDING
+    set(value) {
+        field = value
+        recordButton.updateIconWithState(value) // 값이 바뀔때마다 아이콘이 바뀌는 것을 구현한다.
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         requestAudioPermission()  // 권한을 요청하는 함수이다.
         initViews()
+        bindViews()
 
     }
 
@@ -44,6 +60,63 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         recordButton.updateIconWithState(state)
+    }
+
+    private fun bindViews() {
+        recordButton.setOnClickListener {
+            when(state) {
+                State.BEFORE_RECORDING -> {
+                    startRecording()
+                }
+                State.ON_RECORDING -> {
+                    stopRecording()
+                }
+                State.AFTER_RECODING -> {
+                    startPlaying()
+                }
+                State.ON_PLAYING -> {
+                    stopPlaying()
+                }
+            }
+        }
+    }
+
+    private fun startRecording() {
+        recorder = MediaRecorder().
+            apply {
+            setAudioSource(MediaRecorder.AudioSource.MIC) // 오디오 마이크 소스 접근
+            setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
+            setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
+            setOutputFile(recordingFilePath)
+            prepare()
+        }
+        recorder?.start() // 녹음시작
+        state = State.ON_RECORDING
+    }
+
+    private fun stopRecording() {
+        recorder?.run {
+            stop()
+            release()
+        }
+        recorder = null
+        state = State.AFTER_RECODING
+    }
+
+    private fun startPlaying() {
+        player = MediaPlayer()
+            .apply {
+                setDataSource(recordingFilePath)
+                prepare()
+            }
+        player?.start()
+        state = State.ON_PLAYING
+    }
+
+    private fun stopPlaying() {
+        player?.release()
+        player = null
+        state = State.AFTER_RECODING
     }
 
     companion object {
