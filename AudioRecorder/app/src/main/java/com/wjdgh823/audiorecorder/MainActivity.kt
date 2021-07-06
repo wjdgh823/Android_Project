@@ -5,9 +5,14 @@ import android.media.MediaPlayer
 import android.media.MediaRecorder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity() {
+
+    private val resetButton: Button by lazy {
+        findViewById(R.id.resetButton)
+    }
 
     private val recordButton: RecordButton by lazy {
         findViewById(R.id.recordButton)
@@ -27,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     private var state = State.BEFORE_RECORDING
     set(value) {
         field = value
+        resetButton.isEnabled = (value == State.AFTER_RECODING) || (value == State.ON_PLAYING)
         recordButton.updateIconWithState(value) // 값이 바뀔때마다 아이콘이 바뀌는 것을 구현한다.
     }
 
@@ -37,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         requestAudioPermission()  // 권한을 요청하는 함수이다.
         initViews()
         bindViews()
+        initVariables()
 
     }
 
@@ -63,6 +70,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun bindViews() {
+        resetButton.setOnClickListener {
+            stopPlaying()
+            state = State.BEFORE_RECORDING
+        }
         recordButton.setOnClickListener {
             when(state) {
                 State.BEFORE_RECORDING -> {
@@ -81,9 +92,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun initVariables() {
+        state = State.BEFORE_RECORDING
+    }
+
     private fun startRecording() {
-        recorder = MediaRecorder().
-            apply {
+        recorder = MediaRecorder()
+            .apply {
             setAudioSource(MediaRecorder.AudioSource.MIC) // 오디오 마이크 소스 접근
             setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
             setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
