@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "509733931387",
+    "project_id": "alarmpush-89d92",
+    "storage_bucket": "alarmpush-89d92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509733931387:android:9215088fadb871f5cb15de",
+        "android_client_info": {
+          "package_name": "com.wjdgh823.alarmpush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509733931387-97k88q2t9k61f0b46rfb7jak5dkfrhop.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOpPAb0apWHR1DfFKY1tzEGWq2kBcZUgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509733931387-97k88q2t9k61f0b46rfb7jak5dkfrhop.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

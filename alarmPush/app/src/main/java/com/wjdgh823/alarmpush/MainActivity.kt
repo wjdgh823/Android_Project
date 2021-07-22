@@ -3,6 +3,7 @@ package com.wjdgh823.alarmpush
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.google.firebase.messaging.FirebaseMessaging
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -18,5 +19,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        initFirebase()
+
     }
+
+    private fun initFirebase() {
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    firebaseToken.text = task.result
+                }
+            }
+    }
+
 }
